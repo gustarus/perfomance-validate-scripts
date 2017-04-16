@@ -1,0 +1,14 @@
+{
+  "extends": "airbnb-base",
+  "rules": {
+    "newline-per-chained-call": "off",
+    "comma-dangle": "off",
+    "arrow-body-style": "off",
+    "no-restricted-properties": "off",
+    "class-methods-use-this": "off",
+    "space-before-function-paren": "off"
+  },
+  "plugins": [
+    "import"
+  ]
+}

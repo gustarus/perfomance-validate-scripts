@@ -1,0 +1,13 @@
+# ide
+.idea
+
+# runtime
+/node_modules
+/runtime/*
+
+# locals
+/config.local.js
+
+# vcs
+!.gitignore
+!.gitkeep
