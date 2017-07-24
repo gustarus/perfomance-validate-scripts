@@ -42,8 +42,7 @@ module.exports = function(src, logLevel) {
       const compressed = stats[1].size;
       const diff = source - compressed;
       const percents = Math.round(100 - (compressed * (100 / source)));
-      log.info(`Original file size: ${getFormattedBytes(source)}.`, logLevel);
-      log.info(`Compressed file size: ${getFormattedBytes(compressed)}.`, logLevel);
+      log.info(`Original file size: ${getFormattedBytes(source)}; compressed file size: ${getFormattedBytes(compressed)}.`, logLevel);
       log.success(`Saved after compression: ${getFormattedBytes(diff)} (${percents}%).`, logLevel);
       resolve({ source, compressed });
     }).catch((error) => {

@@ -27,8 +27,7 @@ module.exports = function(relativeUrl, params = {}, logLevel = 0) {
       const mock = new Promise(a => a());
       return inners.reduce((stack, src) => {
         return stack.then(() => {
-          log.notice('Process the script', logLevel);
-          log.info(src, logLevel);
+          log.notice(src, logLevel);
           return script(src, logLevel + 1).then((sizes) => {
             totalSource += sizes.source;
             totalCompressed += sizes.compressed;
